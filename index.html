@@ -120,6 +120,20 @@ h2 {
             border-top: 1px solid var(--dark-green);
         }
 
+
+        ul.custom-triangles {
+        list-style-type: none; /* Supprime les puces par défaut */
+        padding-left: 1.2em;   /* Pour que le texte soit bien aligné */
+        }
+
+        ul.custom-triangles li::before {
+            content: "▶";          /* Le petit triangle */
+        color: var(--main-green);        /* Couleur du triangle */
+        display: inline-block;
+        width: 1em;            /* Pour bien espacer */
+        margin-left: -1em;     /* Place le triangle à gauche */
+        }
+
     </style>
 </head>
 <body>
@@ -146,16 +160,6 @@ h2 {
                         This project enabled me to develop skills in Python programming and machine learning, while deepening my understanding of embedded systems.
                     </a>
                 </li>
-                <li>
-                    <a href="https://github.com/[ton-username]/[projet2]" target="_blank">
-                        <strong>Projet 2</strong> - Description courte du deuxième projet
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/[ton-username]/[projet3]" target="_blank">
-                        <strong>Projet 3</strong> - Description courte du troisième projet
-                    </a>
-                </li>
             </ul>
         </section>
         <section class="internshipprojects">
@@ -163,8 +167,7 @@ h2 {
             <ul class="internship-project-list">
                 <li>
                     <a href="https://github.com/jademelliti/IA_embarquee" target="_blank">
-                        <strong>Embedded artificial intelligence</strong> - In my second year, I contributed to a project aimed at discovering embedded artificial intelligence.
-                        This project enabled me to develop skills in Python programming and machine learning, while deepening my understanding of embedded systems.
+                        <strong>solver to solve stationary Schrodinger</strong> - Use of mathematical approximations and tridiagonal matrices to approximate the Hamiltonian operator.
                     </a>
                 </li>
                 <li>
