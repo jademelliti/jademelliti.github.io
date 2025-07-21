@@ -1,19 +1,156 @@
  <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Mon Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jade [Nom] - Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
-        a { color: #0366d6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        :root {
+            --main-green: #2ecc71;
+            --dark-green: #27ae60;
+            --light-green: #a5df89;
+            --black: #121212;
+            --white: #f5f5f5;
+        }
+       
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+       
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+       
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--main-green);
+            padding-bottom: 1.5rem;
+        }
+       
+        h1 {
+            color: var(--main-green);
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+       
+        h2 {
+            color: var(--light-green);
+            font-size: 2rem;
+            margin-top: 0.5rem;
+        }
+       
+        .description {
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+       
+        .projects {
+            margin-top: 2rem;
+        }
+       
+        .projects h3 {
+            color: var(--main-green);
+            font-size: 2rem;
+            border-bottom: 1px solid var(--dark-green);
+            padding-bottom: 0.5rem;
+        }
+       
+        .project-list {
+            list-style-type: none;
+            padding: 0;
+        }
+       
+        .project-list li {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid var(--main-green);
+            transition: all 0.3s ease;
+        }
+       
+        .project-list li:hover {
+            background-color: rgba(46, 204, 113, 0.2);
+            transform: translate5px);
+        }
+       
+        .project-list a {
+            color: var(--light-green);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+        }
+       
+        .project-list a:hover {
+            color: var(--main-green);
+        }
+       
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: var(--white);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--dark-green);
+        }
     </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon portfolio !</h1>
-    <p>Découvrez mes projets et mon CV :</p>
-    <ul>
-        <li><a href="cv.pdf" target="_blank">📄 Mon CV</a></li>
-        <li><a href="projets/">🚀 Mes projets</a></li>
-    </ul>
+    <div class="container">
+        <header>
+            <h1>Jade [Nom]</h1>
+            <h2>Développeuse &amp; Conceptrice</h2>
+        </header>
+       
+        <section class="description">
+            <p>
+                Passionnée par le développement et la création d'expériences numériques innovantes.
+                Je combine créativité et rigueur technique pour concevoir des solutions élégantes et efficaces.
+            </p>
+        </section>
+       
+        <section class="projects">
+            <h3>Mes Projets</h3>
+            <ul class="project-list">
+                <li>
+                    <a href="https://github.com/[ton-username]/[projet1]" target="_blank">
+                        <strong>Projet 1</strong> - Description courte du premier projet
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/[ton-username]/[projet2]" target="_blank">
+                        <strong>Projet 2</strong> - Description courte du deuxième projet
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/[ton-username]/[projet3]" target="_blank">
+                        <strong>Projet 3</strong> - Description courte du troisième projet
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+   
+    <footer>
+        &copy; <span id="year"></span> Jade [Nom] - Tous droits réservés
+    </footer>
+
+    <script>
+        // Ajoute l'année actuelle automatiquement
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
