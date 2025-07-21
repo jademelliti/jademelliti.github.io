@@ -87,12 +87,27 @@
             transform: translate5px;
         }
        
-        .schoolproject-list a {
-            color: var(--light-green);
+        .school-project-list a,
+        .internship-project-list a,
+        .personal-project-list a {
+            color: var(--white);
             text-decoration: none;
             font-size: 1.1rem;
             display: block;
         }
+
+        .school-project-list a:visited,
+        .internship-project-list a:visited,
+        .personal-project-list a:visited {
+            color: var(--main-green);
+        }
+
+        .school-project-list a:hover,
+        .internship-project-list a:hover,
+        .personal-project-list a:hover {
+            text-decoration: underline;
+        }
+
        
         .schoolproject-list a:visited {
             color: var(--light-green);
